@@ -7,27 +7,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
+          "standalone": true,
           "inlineStyle": true,
           "style": "scss",
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
           "skipTests": true
         },
         "@schematics/angular:service": {
@@ -35,24 +17,24 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "elements",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/plutonium-apps",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "elements/index.html",
+            "main": "elements/main.ts",
+            "polyfills": "elements/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "elements/favicon.ico",
+              "elements/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "elements/styles.scss"
             ],
             "scripts": []
           },
@@ -72,8 +54,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "elements/environments/environment.ts",
+                  "with": "elements/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
