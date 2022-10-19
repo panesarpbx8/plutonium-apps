@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "articles.scss";
+@import "hashtags.scss";
+@import "prism.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+*::selection {
+  @apply bg-secondary text-base-100;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+button, img {
+  user-select: none;
+}
+
+.input-field {
+  @apply flex flex-col gap-2 mb-5;
+
+  input, textarea, .custom-file-input {
+    @apply rounded px-4 py-2 bg-neutral;
+  }
+}
+
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/assets/fonts/Aquire.otf');
+}
+
+.brand {
+  @apply aquire text-2xl md:text-3xl;
+}
+
+.aquire {
+  font-family: 'Aquire';
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #3ABFF8;
+  border-color: #3ABFF8 transparent #3ABFF8 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

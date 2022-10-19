@@ -1,0 +1,53 @@
+.article-list {
+  @apply grid gap-7 md:gap-20;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 350px));
+}
+
+.article-layout {
+  @apply grid gap-10 max-w-screen-2xl mx-auto;
+
+  grid-template-columns: 2fr 3fr;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.article-body {
+  h2 {
+    @apply text-secondary text-3xl mb-6 border-b-2 border-neutral-focus pb-3 capitalize inline-block;
+  }
+
+  p {
+    @apply text-lg mb-6;
+  }
+
+  pre {
+    @apply mockup-code px-5 md:px-7 mb-12;
+    /* width */
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      @apply bg-secondary;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-accent;
+    }
+  }
+
+  code {
+    font-family: 'Fira Code';
+  }
+}
+

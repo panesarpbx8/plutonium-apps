@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+  {{ range .Pages }}
+    <article class="prose lg:prose-lg">
+      <h1>{{ .Title }}</h1>
+      <div>{{ .Content | truncate 250 }}</div>
+    </article>
+  {{ end }}
+
+{{ end }}
+

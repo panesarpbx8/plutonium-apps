@@ -1,0 +1,49 @@
+.hashtags {
+  display: flex;
+	flex-wrap: wrap;
+  gap: 1rem;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.hashtag {
+  transition: opacity 200ms ease-in-out;
+	padding: .25rem .75rem;
+	font-family: 'Fira Code';
+
+	@apply bg-neutral-focus text-neutral-content;
+
+  &:hover {
+		opacity: .85;
+  }
+}
+
+.heading {
+	@apply px-8 py-4 text-4xl;
+}
+
+// .angular, .nestjs {
+// 	background-color: #E83749; 
+// }
+
+// .node, .vue {
+// 	background-color: #12c273; 
+// }
+
+// .sass, .rxjs {
+// 	background-color: #F06292; 
+// }
+
+// .javascript, .firebase {
+// 	background-color: #FCDC00;
+// }
+
+// .typescript, .css, .react, .docker {
+// 	background-color: #4183f5; 
+// }
+
+// .heroku {
+// 	background-color: #7E57C2;
+// }

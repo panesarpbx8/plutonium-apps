@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Page.Title }}</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/img/icon.png">
+
+  <link rel="stylesheet" href="/bundle.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Code&family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  {{ partial "navbar.html" . }}
+
+  <main class="p-5 mt-20 mx-auto mb-20">
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

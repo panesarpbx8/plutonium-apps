@@ -1,0 +1,9 @@
+{
+  "scss.lint.unknownAtRules": "ignore",
+  "cSpell.words": [
+    "daisyui",
+    "devkit",
+    "panesarpbx"
+  ],
+  "npm-scripts.showStartNotification": false
+}

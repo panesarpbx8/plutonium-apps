@@ -1,0 +1,7 @@
+baseURL = 'https://plutonium.vercel.app/'
+languageCode = 'en-us'
+title = 'Plutonium'
+enableRobotsTXT = true
+
+[build]
+noJSConfigInAssets = false

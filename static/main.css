@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.article-list {
+  @apply grid gap-7 md:gap-20;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 350px));
+}
+
+.article-layout {
+  @apply grid gap-10 max-w-screen-2xl mx-auto;
+  grid-template-columns: 2fr 3fr;
+}
+.article-layout img {
+  width: 100%;
+  height: auto;
+}
+
+.article-body h2 {
+  @apply text-secondary text-3xl mb-6 border-b-2 border-neutral-focus pb-3 capitalize inline-block;
+}
+.article-body p {
+  @apply text-lg mb-6;
+}
+.article-body pre {
+  @apply mockup-code px-5 md:px-7 mb-12;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.article-body pre::-webkit-scrollbar {
+  height: 5px;
+}
+.article-body pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+.article-body pre::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+}
+.article-body pre::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+.article-body code {
+  font-family: "Fira Code";
+}
+
+.hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.hashtags a {
+  text-decoration: none;
+}
+
+.hashtag {
+  transition: opacity 200ms ease-in-out;
+  padding: 0.25rem 0.75rem;
+  font-family: "Fira Code";
+  @apply bg-neutral-focus text-neutral-content;
+}
+.hashtag:hover {
+  opacity: 0.85;
+}
+
+.heading {
+  @apply px-8 py-4 text-4xl;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+  color: #c3cee3;
+}
+
+.token.atrule {
+  color: #c792ea;
+}
+
+.token.attr-name {
+  color: #ffcb6b;
+}
+
+.token.attr-value {
+  color: #c3e88d;
+}
+
+.token.attribute {
+  color: #c3e88d;
+}
+
+.token.boolean {
+  color: #c792ea;
+}
+
+.token.builtin {
+  color: #ffcb6b;
+}
+
+.token.cdata {
+  color: #80cbc4;
+}
+
+.token.char {
+  color: #80cbc4;
+}
+
+.token.class {
+  color: #ffcb6b;
+}
+
+.token.class-name {
+  color: #80cbc4;
+}
+
+.token.color {
+  color: #80cbc4;
+}
+
+.token.comment {
+  color: #546e7a;
+}
+
+.token.constant {
+  color: #c792ea;
+}
+
+.token.deleted {
+  color: #f07178;
+}
+
+.token.doctype {
+  color: #546e7a;
+}
+
+.token.entity {
+  color: #f07178;
+}
+
+.token.function {
+  color: #c792ea;
+}
+
+.token.hexcode {
+  color: #f2ff00;
+}
+
+.token.id {
+  color: #c792ea;
+}
+
+.token.important {
+  color: #c792ea;
+}
+
+.token.inserted {
+  color: #80cbc4;
+}
+
+.token.keyword {
+  color: #c792ea;
+}
+
+.token.number {
+  color: #fd9170;
+}
+
+.token.operator {
+  color: #c3cee3;
+}
+
+.token.prolog {
+  color: #546e7a;
+}
+
+.token.property {
+  color: #80cbc4;
+}
+
+.token.pseudo-class {
+  color: #c3e88d;
+}
+
+.token.pseudo-element {
+  color: #c3e88d;
+}
+
+.token.punctuation {
+  color: #c3cee3;
+}
+
+.token.regex {
+  color: #f2ff00;
+}
+
+.token.selector {
+  color: #f07178;
+}
+
+.token.string {
+  color: #c3e88d;
+}
+
+.token.symbol {
+  color: #c792ea;
+}
+
+.token.tag {
+  color: #f07178;
+}
+
+.token.unit {
+  color: #f07178;
+}
+
+.token.url {
+  color: #fd9170;
+}
+
+.token.variable {
+  color: #f07178;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+*::selection {
+  @apply bg-secondary text-base-100;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+button, img {
+  user-select: none;
+}
+
+.input-field {
+  @apply flex flex-col gap-2 mb-5;
+}
+.input-field input, .input-field textarea, .input-field .custom-file-input {
+  @apply rounded px-4 py-2 bg-neutral;
+}
+
+@font-face {
+  font-family: "Aquire";
+  src: url("/assets/fonts/Aquire.otf");
+}
+.brand {
+  @apply aquire text-2xl md:text-3xl;
+}
+
+.aquire {
+  font-family: "Aquire";
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #3ABFF8;
+  border-color: #3ABFF8 transparent #3ABFF8 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
